@@ -1,0 +1,516 @@
+{
+    "last_updated":"",
+    "last_updated_by":"",
+    
+    "content_items":[
+        {
+            "id": 1,
+            "name": "tabbar"
+        },
+        {
+            "id": 2,
+            "name": "home"
+        },
+        {
+            "id": 3,
+            "name": "campus_tools"
+        },
+        {
+            "id": 5,
+            "name": "features"
+        }
+    ],
+    "content_items_ui_items":[
+        {
+            "id": 1,
+            "content_item_id": 1,
+            "ui_item_id": 5
+        },
+        {
+            "id": 2,
+            "content_item_id": 1,
+            "ui_item_id": 3
+        },
+        {
+            "id": 3,
+            "content_item_id": 1,
+            "ui_item_id": 4
+        },
+        {
+            "id": 4,
+            "content_item_id": 1,
+            "ui_item_id": 2
+        },
+        {
+            "id": 5,
+            "content_item_id": 2,
+            "ui_item_id": 27
+        },
+        {
+            "id": 6,
+            "content_item_id": 2,
+            "ui_item_id": 28
+        },
+        {
+            "id": 7,
+            "content_item_id": 2,
+            "ui_item_id": 6
+        },
+        {
+            "id": 8,
+            "content_item_id": 2,
+            "ui_item_id": 7
+        },
+        {
+            "id": 9,
+            "content_item_id": 2,
+            "ui_item_id": 8
+        },
+        {
+            "id": 10,
+            "content_item_id": 2,
+            "ui_item_id": 9
+        },
+        {
+            "id": 11,
+            "content_item_id": 2,
+            "ui_item_id": 10
+        },
+        {
+            "id": 12,
+            "content_item_id": 2,
+            "ui_item_id": 11
+        },
+        {
+            "id": 13,
+            "content_item_id": 2,
+            "ui_item_id": 18
+        },
+        {
+            "id": 14,
+            "content_item_id": 3,
+            "ui_item_id": 12
+        },
+        {
+            "id": 15,
+            "content_item_id": 3,
+            "ui_item_id": 13
+        },
+        {
+            "id": 16,
+            "content_item_id": 3,
+            "ui_item_id": 14
+        },
+        {
+            "id": 17,
+            "content_item_id": 3,
+            "ui_item_id": 15
+        },
+        {
+            "id": 18,
+            "content_item_id": 3,
+            "ui_item_id": 16
+        },
+        {
+            "id": 19,
+            "content_item_id": 3,
+            "ui_item_id": 17
+        },
+        {
+            "id": 20,
+            "content_item_id": 5,
+            "ui_item_id": 19
+        },
+        {
+            "id": 21,
+            "content_item_id": 5,
+            "ui_item_id": 26
+        }
+    ],
+    "rule_types":[
+        {"id": 1, "name" : "roles"},
+        {"id": 2, "name" : "privacy"},
+        {"id": 3, "name" : "auth"},
+        {"id": 4, "name" : "illini_cash"},
+        {"id": 5, "name" : "enable"}
+    ],
+    "rules":[
+        {
+            "id": 1,
+            "rule_type_id": 1,
+            "value": [
+                [
+                    "NOT",
+                    "fan"
+                ],
+                "OR",
+                "student",
+                "OR",
+                "employee",
+                "OR",
+                "parent"
+            ]
+        },
+        {
+            "id": 2,
+            "rule_type_id": 1,
+            "value": [
+                "fan",
+                "AND",
+                [
+                    "NOT",
+                    [
+                        "student",
+                        "OR",
+                        "employee",
+                        "OR",
+                        "parent"
+                    ]
+                ]
+            ]
+        },
+        {
+            "id": 3,
+            "rule_type_id": 1,
+            "value": [
+                "fan",
+                "AND",
+                [
+                    "student",
+                    "OR",
+                    "employee",
+                    "OR",
+                    "parent"
+                ],
+                "AND",
+                [
+                    "NOT",
+                    [
+                        "visitor",
+                        "OR",
+                        "alumni"
+                    ]
+                ]
+            ]
+        },
+        {
+            "id": 4,
+            "rule_type_id": 1,
+            "value": [
+                "fan",
+                "AND",
+                [
+                    "student",
+                    "OR",
+                    "employee",
+                    "OR",
+                    "parent"
+                ],
+                "AND",
+                [
+                    "NOT",
+                    [
+                        "visitor",
+                        "OR",
+                        "alumni"
+                    ]
+                ]
+            ]
+        },
+        {
+            "id": 5,
+            "rule_type_id": 1,
+            "value": [
+                [
+                    "NOT",
+                    "alumni"
+                ],
+                "OR",
+                "student",
+                "OR",
+                "fan",
+                "OR",
+                "employee",
+                "OR",
+                "parent"
+            ]
+        },
+        {
+            "id": 6,
+            "rule_type_id": 1,
+            "value": [
+                "student"
+            ]
+        },
+        {
+            "id": 7,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 8,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 9,
+            "rule_type_id": 4,
+            "value": {
+                "housingResidenceStatus": true
+            }
+        },
+        {
+            "id": 10,
+            "rule_type_id": 1,
+            "value": [
+                "student"
+            ]
+        },
+        {
+            "id": 11,
+            "rule_type_id": 2,
+            "value": 3
+        },
+        {
+            "id": 12,
+            "rule_type_id": 5,
+            "value": true
+        },
+        {
+            "id": 13,
+            "rule_type_id": 2,
+            "value": 3
+        },
+        {
+            "id": 14,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 15,
+            "rule_type_id": 5,
+            "value": false
+        },
+        {
+            "id": 16,
+            "rule_type_id": 2,
+            "value": 5
+        },
+        {
+            "id": 17,
+            "rule_type_id": 5,
+            "value": true
+        }
+    ],
+    "rules_ui_items":[
+        {
+            "id": 1,
+            "ui_item_id": 2,
+            "rule_id": 1
+        },
+        {
+            "id": 2,
+            "ui_item_id": 3,
+            "rule_id": 2
+        },
+        {
+            "id": 3,
+            "ui_item_id": 6,
+            "rule_id": 3
+        },
+        {
+            "id": 4,
+            "ui_item_id": 8,
+            "rule_id": 4
+        },
+        {
+            "id": 5,
+            "ui_item_id": 9,
+            "rule_id": 5
+        },
+        {
+            "id": 6,
+            "ui_item_id": 16,
+            "rule_id": 6
+        },
+        {
+            "id": 7,
+            "ui_item_id": 16,
+            "rule_id": 7
+        },
+        {
+            "id": 8,
+            "ui_item_id": 16,
+            "rule_id": 8
+        },
+        {
+            "id": 9,
+            "ui_item_id": 16,
+            "rule_id": 9
+        },
+        {
+            "id": 10,
+            "ui_item_id": 17,
+            "rule_id": 10
+        },
+        {
+            "id": 11,
+            "ui_item_id": 15,
+            "rule_id": 11
+        },
+        {
+            "id": 12,
+            "ui_item_id": 15,
+            "rule_id": 12
+        },
+        {
+            "id": 13,
+            "ui_item_id": 18,
+            "rule_id": 13
+        },
+        {
+            "id": 14,
+            "ui_item_id": 11,
+            "rule_id": 14
+        },
+        {
+            "id": 15,
+            "ui_item_id": 26,
+            "rule_id": 15
+        },
+        {
+            "id": 16,
+            "ui_item_id": 19,
+            "rule_id": 16
+        },
+        {
+            "id": 17,
+            "ui_item_id": 19,
+            "rule_id": 17
+        }
+    ],
+    "ui_items":[
+        {
+            "id": 2,
+            "name": "home",
+            "order": 1
+        },
+        {
+            "id": 3,
+            "name": "athletics",
+            "order": 2
+        },
+        {
+            "id": 4,
+            "name": "explore",
+            "order": 3
+        },
+        {
+            "id": 5,
+            "name": "more",
+            "order": 4
+        },
+        {
+            "id": 6,
+            "name": "game_day",
+            "order": 3
+        },
+        {
+            "id": 7,
+            "name": "campus_tools",
+            "order": 4
+        },
+        {
+            "id": 8,
+            "name": "pref_sports",
+            "order": 5
+        },
+        {
+            "id": 9,
+            "name": "campus_reminders",
+            "order": 6
+        },
+        {
+            "id": 10,
+            "name": "upcoming_events",
+            "order": 7
+        },
+        {
+            "id": 11,
+            "name": "recent_items",
+            "order": 8
+        },
+        {
+            "id": 12,
+            "name": "events",
+            "order": 1
+        },
+        {
+            "id": 13,
+            "name": "dining",
+            "order": 2
+        },
+        {
+            "id": 14,
+            "name": "athletics",
+            "order": 3
+        },
+        {
+            "id": 15,
+            "name": "illini_cash",
+            "order": 4
+        },
+        {
+            "id": 16,
+            "name": "laundry",
+            "order": 5
+        },
+        {
+            "id": 17,
+            "name": "my_illini",
+            "order": 6
+        },
+        {
+            "id": 18,
+            "name": "interests_selection",
+            "order": 9
+        },
+        {
+            "id": 19,
+            "name": "converge",
+            "order": 1
+        },
+        {
+            "id": 20,
+            "name": "events_list",
+            "order": 0
+        },
+        {
+            "id": 21,
+            "name": "map",
+            "order": 0
+        },
+        {
+            "id": 23,
+            "name": "filters",
+            "order": 0
+        },
+        {
+            "id": 26,
+            "name": "create_event",
+            "order": 2
+        },
+        {
+            "id": 27,
+            "name": "voter_registration",
+            "order": 1
+        },
+        {
+            "id": 28,
+            "name": "create_poll",
+            "order": 2
+        }
+    ]
+}

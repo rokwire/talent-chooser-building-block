@@ -1,0 +1,162 @@
+basePath: /talent-chooser
+definitions:
+  Card:
+    properties:
+      card_number:
+        type: string
+      library_number:
+        type: string
+    type: object
+  IliniCash:
+    properties:
+      HousingResidentStatus:
+        type: boolean
+    type: object
+  Pii:
+    properties:
+      documentType:
+        type: string
+    type: object
+  Platform:
+    properties:
+      os:
+        type: string
+    type: object
+  PrivacySettings:
+    properties:
+      level:
+        type: integer
+    type: object
+  Token:
+    properties:
+      access_token:
+        type: string
+      id_token:
+        type: string
+      phone:
+        type: string
+      refresh_token:
+        type: string
+    type: object
+  UIContent:
+    additionalProperties:
+      items:
+        type: string
+      type: array
+    type: object
+  User:
+    properties:
+      privacySettings:
+        $ref: '#/definitions/PrivacySettings'
+        type: object
+      roles:
+        items:
+          type: string
+        type: array
+      uuid:
+        type: string
+    type: object
+  UserInfo:
+    properties:
+      email:
+        type: string
+      family_name:
+        type: string
+      given_name:
+        type: string
+      name:
+        type: string
+      preferred_username:
+        type: string
+      sub:
+        type: string
+      uiucedu_is_member_of:
+        items:
+          type: string
+        type: array
+      uiucedu_uin:
+        type: string
+    type: object
+  getUIContentRequest:
+    properties:
+      auth_token:
+        $ref: '#/definitions/Token'
+        type: object
+      auth_user:
+        $ref: '#/definitions/UserInfo'
+        type: object
+      card:
+        $ref: '#/definitions/Card'
+        type: object
+      illini_cash:
+        $ref: '#/definitions/IliniCash'
+        type: object
+      pii:
+        $ref: '#/definitions/Pii'
+        type: object
+      platform:
+        $ref: '#/definitions/Platform'
+        type: object
+      user:
+        $ref: '#/definitions/User'
+        type: object
+    type: object
+host: localhost
+info:
+  contact: {}
+  description: Rokwire Talent Chooser Building Block API Documentation.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Rokwire Talent Chooser Building Block API
+  version: 1.2.1
+paths:
+  /api/v3/ui-content:
+    get:
+      consumes:
+      - application/json
+      description: Gives the ui content based on the parameters.
+      operationId: GetUIContentV3
+      parameters:
+      - description: for example '2.2'
+        in: query
+        name: data-version
+        type: string
+      - description: body data
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/getUIContentRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/UIContent'
+      security:
+      - RokwireAuth: []
+      tags:
+      - APIs
+  /api/version:
+    get:
+      description: Gives the service version.
+      operationId: Version
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - APIs
+schemes:
+- https
+securityDefinitions:
+  RokwireAuth:
+    in: header
+    name: ROKWIRE-API-KEY
+    type: apiKey
+swagger: "2.0"

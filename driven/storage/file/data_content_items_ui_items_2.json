@@ -1,0 +1,26 @@
+[
+    {"id": 1, "content_item_id":1, "ui_item_id":5},
+    {"id": 2, "content_item_id":1, "ui_item_id":3},
+    {"id": 3, "content_item_id":1, "ui_item_id":4},
+    {"id": 4, "content_item_id":1, "ui_item_id":2},
+
+    {"id": 5, "content_item_id":2, "ui_item_id":27},
+    {"id": 6, "content_item_id":2, "ui_item_id":28},
+    {"id": 7, "content_item_id":2, "ui_item_id":6},
+    {"id": 8, "content_item_id":2, "ui_item_id":7},
+    {"id": 9, "content_item_id":2, "ui_item_id":8},
+    {"id": 10, "content_item_id":2, "ui_item_id":9},
+    {"id": 11, "content_item_id":2, "ui_item_id":10},
+    {"id": 12, "content_item_id":2, "ui_item_id":11},
+    {"id": 13, "content_item_id":2, "ui_item_id":18},
+
+    {"id": 14, "content_item_id":3, "ui_item_id":12},
+    {"id": 15, "content_item_id":3, "ui_item_id":13},
+    {"id": 16, "content_item_id":3, "ui_item_id":14},
+    {"id": 17, "content_item_id":3, "ui_item_id":15},
+    {"id": 18, "content_item_id":3, "ui_item_id":16},
+    {"id": 19, "content_item_id":3, "ui_item_id":17},
+
+    {"id": 20, "content_item_id":5, "ui_item_id":19},
+    {"id": 21, "content_item_id":5, "ui_item_id":26}
+]

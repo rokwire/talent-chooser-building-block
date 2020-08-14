@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style> 
+        body {
+	        margin: 0;
+	        padding: 0;
+	        font-family: sans-serif;
+        }
+        a {
+	        color: #005b86;
+	        text-decoration: none;
+        }
+        a:hover, a:focus {
+	        text-decoration: underline;
+        }
+        p {
+            color: #ffffff;
+        }
+        div.page-wrapper {
+	        max-width: 960px;
+	        margin: 0 auto;
+	        border-left: 1px solid #707372;
+	        border-right: 1px solid #707372;
+        }
+        header {
+	        background-color: #707372;
+	        border-bottom: 1px solid #707372;
+	        filter: none;
+	        overflow: hidden;
+        }
+        header object, header img {
+	        margin: 1em;
+	        height: 51px;
+	        width: auto;
+	        display: block;
+        }
+        .mlogo {
+	        float: left;
+        }
+        .stitle {
+	        float: right;
+            font-size: 35px;
+            padding-right: 2%
+        }
+        ul.buttons {
+	        list-style-type: none;
+	        margin: 0;
+	        padding: 0;
+        }
+        ul.buttons li {
+	        margin: 0;
+	        border-bottom: 1px solid #ccc;
+        }
+        ul.buttons a:hover, ul.buttons a:focus {
+	        background-color: #eee;
+        }
+        ul.buttons li a {
+            text-align: center;
+            display: inline-block;
+            font-size: 1.6em;
+            line-height: 1.6em;
+            width: 100%;
+            padding: 20px 0;
+            text-decoration: none;
+        }
+        footer {
+            padding: 10px;
+            background-color: #707372;
+            overflow: hidden;
+            clear: both;
+            font-size: 80%;
+        }
+        footer a {
+            color: #ffffff;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(e) {
+            $.ajax({
+                url: "api/version",
+                type: "GET",
+                success: function(data) {
+                    $("#versionItem").html("v." + data);
+                }
+            });
+        });
+    </script>
+    <title>Talent Chooser</title>
+  </head>
+  <body>
+      <div class="page-wrapper">
+            <header>
+				<img class="mlogo" src="https://illinois.edu/assets/img/branding/wordmark_vertical.png">
+                <p class="stitle">Talent Chooser</p>
+            </header>
+            
+            <section>
+				<ul class="buttons">
+					<li>
+						 <a href="auth/login">Log In</a>
+					</li>
+				</ul>
+			</section>
+
+            <footer>
+                <p id="versionItem">v.0.0.0</p>
+            </footer>
+      </div>
+  </body>
+</html>
