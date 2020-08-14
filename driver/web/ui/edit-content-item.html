@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style> 
+        div {
+            text-align:center;
+            align-content: center;
+            align-items: center;
+        }
+        .main-content {
+          border-top: double;
+            padding-top: 25;
+            width:800px; 
+            margin:0 auto;
+        }
+        .content-items-content {
+            padding-top: 60px;
+            width:800px; 
+            margin:0 auto;
+        }
+        .rTable {
+          padding-top: 60px;
+          width:800px; 
+          margin:0 auto;
+          display: block;
+        }
+        .rTableHeading, .rTableBody, .rTableFoot, .rTableRow{
+          clear: both;
+        }
+        .rTableHead, .rTableFoot{
+          background-color: rgb(231, 223, 223);
+          font-weight: bold;
+        }
+        .rTableUIItemsHead, .rTableFoot{
+          background-color: rgb(231, 223, 223);
+          font-weight: bold;
+        }
+        .rTableCell, .rTableHead {
+          border: 1px solid #999999;
+          float: left;
+          height: auto;
+          overflow: hidden;
+          padding: 3px 1.8%;
+          width: 100px;
+        }
+        .rTableCellUIItems, .rTableUIItemsHead {
+          border: 1px solid #999999;
+          height: auto;
+          width: 680px;
+          padding: 3px 1.8%;
+        }
+        .rTable:after {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: " ";
+          clear: both;
+          height: 0;
+        }
+        .footer-content {
+            padding-top: 360px;
+        }
+        .rTable2 {
+          width:550px; 
+          margin:0 auto;
+          display: block;
+        }
+        .rTableCell2, .rTableHead2 {
+          border: 1px solid #999999;
+          float: left;
+          height: auto;
+          overflow: hidden;
+          padding: 3px 1.8%;
+          width: auto;
+        }
+        .contentTable {
+          width:800px; 
+        }
+        .contentTableCell {
+          width: 100px;
+        }
+        .contentTableCellUIItems {
+          width: 600px;
+        }
+        .uiItemsTable {
+          width:100%; 
+        }
+        .uiItemTableCell {
+          width: 120px;
+          height: auto;
+        }
+        .uiItemSmallTableCell {
+          width: 40px;
+          height: auto;
+        }
+        .rulesTable {
+          width:100%; 
+          
+        }
+        .rulesTableCell {
+          width: 40px;
+          height: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+
+        //The 2 indicates the page was accessed by navigating into the history.
+        if (performance.navigation.type == 2) {
+          location.reload(true);
+        }
+
+        contentItemID = getUrlParameter("id")
+        $.ajax({
+            url: "admin/content-items/" + contentItemID,
+            headers: {
+              "ROKWIRE-API-KEY":"1234"
+            },
+            type: "GET",
+            success: function(data) {
+                console.log(data)
+                $("#name").val(data.name);
+
+                content = $("#uiItems")
+                $.each(data["ui-items"], function(k, v) {
+
+                  editBtn = '<button type="button" onclick="editUIItem(' + v.id + ')">Edit</button>'
+                  deleteBtn = '<button type="button" onclick="deleteUIItem(' + v.id + ')">Delete</button>'
+                  content.append('<tr><td>' + v.id + '</td><td>' + v.name + '</td><td>' + v.order + '</td><td>' + editBtn + '</td><td>' + deleteBtn + '</td></tr>');
+
+                  console.log(v)
+              });
+            }
+        });
+
+        $.ajax({
+            url: "api/version",
+            type: "GET",
+            success: function(data) {
+                $("#versionItem").html("v." + data);
+            }
+        });
+
+        });
+
+        var getUrlParameter = function getUrlParameter(sParam) {
+          var sPageURL = window.location.search.substring(1),
+          sURLVariables = sPageURL.split('&'), sParameterName, i;
+
+          for (i = 0; i < sURLVariables.length; i++) {
+             sParameterName = sURLVariables[i].split('=');
+
+          if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+          }
+          }
+        };
+
+        function updateItem() {
+            $("#updateForm").unbind('submit').submit(function(e) {
+                e.preventDefault(); // avoid to execute the actual submit of the form.
+                var form = $(this);   
+                var name = $("#name").val();
+
+                $.ajax({
+                    type: "PUT",
+                    url: "admin/content-items/" + getUrlParameter("id"),
+                    headers: {
+                        "ROKWIRE-API-KEY":"1234"
+                    },
+                    data: '{"name":"' + name + '"}', 
+                    success: function(data) {
+                            //back to the list
+                            history.back();
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert("Error occurred - " + xhr.responseText);
+                        }
+                });
+            });
+        }
+
+        function newUIItem() {
+          document.location.href = "new-ui-item?content-item-id=" + encodeURIComponent(getUrlParameter("id"));
+        }
+
+        function editUIItem(uiItemID) {
+          document.location.href = "edit-ui-item?content-item-id=" + encodeURIComponent(getUrlParameter("id")) + "&id=" + encodeURIComponent(uiItemID);
+        }
+
+        function deleteUIItem(uiItemID) {
+          if (confirm('Are you sure you want to delete the item?')) {
+              $.ajax({
+                url: "admin/content-items/" + getUrlParameter("id") + "/ui-items/" + uiItemID,
+                type: "DELETE",
+                success: function(data) {
+                  //reload the page
+                  location.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                  alert("Error occurred - " + xhr.responseText);
+                }
+            }); 
+          } else {
+            // Do nothing!
+          }
+        }
+    </script>
+        <title>Talent Chooser</title>
+  </head>
+  <body>
+      <div class="main-content">
+
+        <h2>Update Content Item</h2>
+
+        <form id="updateForm">
+          <label>Name</label>
+          <input type="text" name="name" id="name" />
+          <input type="submit" value="Update" onclick="updateItem()">
+        </form>
+
+        <h3>UI Items</h3>
+
+        <div style="margin:0 auto; width: 100%; padding-bottom: 25px;">
+          <button type="button" onclick="newUIItem()" style="float: right;">New</button>
+        </div>
+        
+        <table id="uiItems" align="center" border="1" class="contentTable">
+            <tr class="contentTableRow">
+              <th class="contentTableCell">ID</th>
+              <th class="contentTableCell">Name</th>
+              <th class="contentTableCell">Order</th>
+              <th class="contentTableCell"></th>
+              <th class="contentTableCell"></th>
+            </tr>
+        </table>
+            
+        <div  class="footer-content">
+            <p id="versionItem">v.0.0.0</p>
+        </div>
+      </div>
+  </body>
+</html>

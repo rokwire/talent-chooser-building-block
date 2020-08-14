@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style> 
+        div {
+            text-align:center;
+            align-content: center;
+            align-items: center;
+        }
+        .main-content {
+            border-top: double;
+            padding-top: 25;
+            width:800px; 
+            margin:0 auto;
+        }
+        .content-items-content {
+            padding-top: 60px;
+            width:800px; 
+            margin:0 auto;
+        }
+        .footer-content {
+            padding-top: 360px;
+        }
+        .rTable2 {
+          width:550px; 
+          margin:0 auto;
+          display: block;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+
+        $.ajax({
+            url: "api/version",
+            type: "GET",
+            success: function(data) {
+                $("#versionItem").html("v." + data);
+            }
+        });
+
+        });
+
+        function setDataVersion(version) {
+            $.ajax({
+            url: "admin/data-version",
+            type: "PUT",
+            data: '{"data-version":"' + version + '"}', 
+            success: function(data) {
+                document.location.href = "content-items";
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert("Error occurred - " + xhr.responseText);
+            }
+        }); 
+        }
+    </script>
+        <title>Talent Chooser</title>
+  </head>
+  <body>
+      <div class="main-content">
+
+            <h3>Choose data version</h3>
+           
+            <div style="margin:0 auto; width: 50%; padding-bottom: 25px;">
+                <button type="button" onclick="setDataVersion('1.2')">1.2</button>
+            </div>
+            <div style="margin:0 auto; width: 100%; padding-bottom: 25px;">
+                    <button type="button" onclick="setDataVersion('2.0')">2.0</button>
+            </div>
+            <div style="margin:0 auto; width: 100%; padding-bottom: 25px;">
+                <button type="button" onclick="setDataVersion('2.1')">2.1</button>
+            </div>
+            <div style="margin:0 auto; width: 100%; padding-bottom: 25px;">
+                <button type="button" onclick="setDataVersion('2.2')">2.2</button>
+            </div>
+           
+            <div  class="footer-content">
+                <p id="versionItem">v.0.0.0</p>
+            </div>
+      </div>
+  </body>
+</html>

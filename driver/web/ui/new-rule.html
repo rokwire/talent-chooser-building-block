@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style> 
+        div {
+            text-align:center;
+            align-content: center;
+            align-items: center;
+        }
+        .main-content {
+            border-top: double;
+            padding-top: 25;
+            width:800px; 
+            margin:0 auto;
+        }
+        .footer-content {
+            padding-top: 360px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(e) {
+            //The 2 indicates the page was accessed by navigating into the history.
+            if (performance.navigation.type == 2) {
+                location.reload(true);
+            }
+
+            $.ajax({
+                url: "admin/rule-types",
+                type: "GET",
+                success: function(data) {
+                    $.each(data, function(k, v) {
+                        var o = new Option(v.name, v.id);
+                        $(o).html(v.name);
+                        $("#rule-type").append(o);
+                    }); 
+                }
+            });
+            
+            $.ajax({
+                url: "api/version",
+                type: "GET",
+                success: function(data) {
+                    $("#versionItem").html("v." + data);
+                }
+            });
+        });
+
+        function createItem() {
+            $("#createForm").unbind('submit').submit(function(e) {
+                e.preventDefault(); // avoid to execute the actual submit of the form.
+                var form = $(this);   
+                var ruleTypeId = $("#rule-type").val();
+                var value = $("#value").val();
+
+                console.log("Call createItem")
+                $.ajax({
+                    type: "POST",
+                    url: "admin/ui-items/" + getUrlParameter("ui-item-id") + "/rules",
+                    data: '{"rule-type-id":' + ruleTypeId + ', "value":' + value + '}', 
+                    success: function(data) {
+                            //back to the list
+                            history.back();
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert("Error occurred - " + xhr.responseText);
+                        }
+                });
+            }); 
+        }
+
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'), sParameterName, i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+        };
+    </script>
+    <title>Talent Chooser</title>
+  </head>
+  <body>
+      <div class="main-content">
+            <h2>New Rule</h2>
+
+            <form id="createForm">
+                <label>Rule Type</label>
+                <select name="rule-type" id="rule-type" required></select>
+                <br><br>
+                <label>Value</label>
+                <textarea  name="value" id="value" rows="1" cols="70"></textarea>
+                <br><br>
+                <input type="submit" value="Create" onclick="createItem()">
+            </form>
+
+            <div  class="footer-content">
+                <p id="versionItem">v.0.0.0</p>
+            </div>
+      </div>
+  </body>
+</html>

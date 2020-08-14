@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style> 
+        div {
+            text-align:center;
+            align-content: center;
+            align-items: center;
+        }
+        .main-content {
+          border-top: double;
+            padding-top: 25;
+            width:800px; 
+            margin:0 auto;
+        }
+        .content-items-content {
+            padding-top: 60px;
+            width:800px; 
+            margin:0 auto;
+        }
+        .rTable {
+          padding-top: 60px;
+          width:800px; 
+          margin:0 auto;
+          display: block;
+        }
+        .rTableHeading, .rTableBody, .rTableFoot, .rTableRow{
+          clear: both;
+        }
+        .rTableHead, .rTableFoot{
+          background-color: rgb(231, 223, 223);
+          font-weight: bold;
+        }
+        .rTableUIItemsHead, .rTableFoot{
+          background-color: rgb(231, 223, 223);
+          font-weight: bold;
+        }
+        .rTableCell, .rTableHead {
+          border: 1px solid #999999;
+          float: left;
+          height: auto;
+          overflow: hidden;
+          padding: 3px 1.8%;
+          width: 100px;
+        }
+        .rTableCellUIItems, .rTableUIItemsHead {
+          border: 1px solid #999999;
+          height: auto;
+          width: 680px;
+          padding: 3px 1.8%;
+        }
+        .rTable:after {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: " ";
+          clear: both;
+          height: 0;
+        }
+        .footer-content {
+            padding-top: 360px;
+        }
+        .rTable2 {
+          width:550px; 
+          margin:0 auto;
+          display: block;
+        }
+        .rTableCell2, .rTableHead2 {
+          border: 1px solid #999999;
+          float: left;
+          height: auto;
+          overflow: hidden;
+          padding: 3px 1.8%;
+          width: auto;
+        }
+        .contentTable {
+          width:800px; 
+        }
+        .contentTableCell {
+          width: 100px;
+        }
+        .contentTableCellUIItems {
+          width: 600px;
+        }
+        .uiItemsTable {
+          width:100%; 
+        }
+        .uiItemTableCell {
+          width: 120px;
+          height: auto;
+        }
+        .uiItemSmallTableCell {
+          width: 40px;
+          height: auto;
+        }
+        .rulesTable {
+          width:100%; 
+          
+        }
+        .rulesTableCell {
+          width: 40px;
+          height: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+
+        //The 2 indicates the page was accessed by navigating into the history.
+        if (performance.navigation.type == 2) {
+          location.reload(true);
+        }
+
+        $.ajax({
+                url: "admin/rule-types",
+                headers: {
+                    "ROKWIRE-API-KEY":"1234"
+                },
+                type: "GET",
+                success: function(data) {
+                    $.each(data, function(k, v) {
+                        var o = new Option(v.name, v.id);
+                        $(o).html(v.name);
+                        $("#rule-type").append(o);
+                    }); 
+                }
+          });
+
+        uiItemID = getUrlParameter("ui-item-id")
+        ID = getUrlParameter("id")
+        $.ajax({
+            url: "admin/ui-items/" + uiItemID + "/rules/" + ID,
+            type: "GET",
+            success: function(data) {
+                console.log(data)
+                ruleType = data["rule-type"]
+                $("#rule-type").val(ruleType.id);
+                $("#value").val(JSON.stringify(data.value)); 
+            }
+        });
+     
+        $.ajax({
+            url: "api/version",
+            type: "GET",
+            success: function(data) {
+                $("#versionItem").html("v." + data);
+            }
+        });
+
+        });
+
+        var getUrlParameter = function getUrlParameter(sParam) {
+          var sPageURL = window.location.search.substring(1),
+          sURLVariables = sPageURL.split('&'), sParameterName, i;
+
+          for (i = 0; i < sURLVariables.length; i++) {
+             sParameterName = sURLVariables[i].split('=');
+
+          if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+          }
+          }
+        };
+
+        function updateItem() {
+          $("#updateForm").unbind('submit').submit(function(e) {
+                e.preventDefault(); // avoid to execute the actual submit of the form.
+                var form = $(this);   
+                var ruleTypeId = $("#rule-type").val();
+                var value = $("#value").val();
+
+                uiItemID = getUrlParameter("ui-item-id")
+                id = getUrlParameter("id")
+                $.ajax({
+                    type: "PUT",
+                    url: "admin/ui-items/" + uiItemID + "/rules/" + id,
+                    headers: {
+                        "ROKWIRE-API-KEY":"1234"
+                    },
+                    data: '{"rule-type-id":' + ruleTypeId + ', "value":' + value + '}', 
+                    success: function(data) {
+                            //back to the list
+                            history.back();
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert("Error occurred - " + xhr.responseText);
+                        }
+                });
+            });
+        }
+    </script>
+        <title>Talent Chooser</title>
+  </head>
+  <body>
+      <div class="main-content">
+
+        <h2>Update Rule</h2>
+
+        <form id="updateForm">
+          <label>Rule Type</label>
+          <select name="rule-type" id="rule-type" required></select>
+          <br><br>
+          <label>Value</label>
+          <textarea  name="value" id="value" rows="1" cols="70"></textarea>
+          <br><br>
+          <input type="submit" value="Update" onclick="updateItem()">
+      </form>
+       
+        <div  class="footer-content">
+            <p id="versionItem">v.0.0.0</p>
+        </div>
+      </div>
+  </body>
+</html>

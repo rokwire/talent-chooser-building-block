@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style> 
+        div {
+            text-align:center;
+            align-content: center;
+            align-items: center;
+        }
+        .main-content {
+            border-top: double;
+            padding-top: 25;
+            width:800px; 
+            margin:0 auto;
+        }
+        .footer-content {
+            padding-top: 360px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        function createItem() {
+            $("#createForm").unbind('submit').submit(function(e) {
+                e.preventDefault(); // avoid to execute the actual submit of the form.
+                var form = $(this);   
+                var name = $("#name").val();
+                $.ajax({
+                    type: "POST",
+                    url: "admin/content-items",
+                    data: '{"name":"' + name + '"}', 
+                    success: function(data) {
+                            //back to the list
+                            history.back();
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert("Error occurred - " + xhr.responseText);
+                        }
+                });
+            });
+        }
+    </script>
+    <title>Talent Chooser</title>
+  </head>
+  <body>
+      <div class="main-content">
+            <h2>New Content Item</h2>
+
+            <form id="createForm">
+                <label>Name</label>
+                <input type="text" name="name" id="name" />
+                <input type="submit" value="Create" onclick="createItem()">
+            </form>
+            
+            <div  class="footer-content">
+                <p id="versionItem">v.0.0.0</p>
+            </div>
+      </div>
+  </body>
+</html>

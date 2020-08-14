@@ -1,0 +1,81 @@
+[
+    {
+        "_comment":"rule type - roles",
+        "id": 1, "rule_type_id": 1, "value":[["NOT", "fan"], "OR", "student", "OR", "employee", "OR", "parent"]
+    },
+
+    {
+        "_comment":"rule type - roles",
+        "id": 2, "rule_type_id": 1, "value":["fan", "AND", ["NOT", ["student", "OR", "employee", "OR", "parent"]]]
+    },
+
+    {
+        "_comment":"rule type - roles",
+        "id": 3, "rule_type_id": 1, "value":["fan", "AND", ["student", "OR", "employee", "OR", "parent"], "AND", ["NOT", ["visitor", "OR", "alumni"]]]
+    },
+
+    {
+        "_comment":"rule type - roles",
+        "id": 4, "rule_type_id": 1, "value":["fan", "AND", ["student", "OR", "employee", "OR", "parent"], "AND", ["NOT", ["visitor", "OR", "alumni"]]]
+    },
+
+    {
+        "_comment":"rule  type- roles",
+        "id": 5, "rule_type_id": 1, "value":[["NOT", "alumni"], "OR", "student", "OR", "fan", "OR", "employee", "OR", "parent"]
+    },
+
+    {
+        "_comment":"rule type - roles",
+        "id": 6, "rule_type_id": 1, "value":["student"]
+    },
+    {
+        "_comment":"rule type - privacy",
+        "id": 7, "rule_type_id": 2, "value":4
+    },
+    {
+        "_comment":"rule type - auth",
+        "id": 8, "rule_type_id": 3, "value":{ "shibbolethLoggedIn": true }
+    },
+    {
+        "_comment":"rule type - illini_cash",
+        "id": 9, "rule_type_id": 4, "value":{ "housingResidenceStatus" : true }
+    },
+
+    {
+        "_comment":"rule type - illini_cash",
+        "id": 10, "rule_type_id": 1, "value":["student"]
+    },
+
+    {
+        "_comment":"rule type - privacy",
+        "id": 11, "rule_type_id": 2, "value":3
+    },
+    {
+        "_comment":"rule type - enable",
+        "id": 12, "rule_type_id": 5, "value":true
+    },
+
+    {
+        "_comment":"rule type - privacy",
+        "id": 13, "rule_type_id": 2, "value":3
+    },
+
+    {
+        "_comment":"rule type - privacy",
+        "id": 14, "rule_type_id": 2, "value":4
+    },
+
+    {
+        "_comment":"rule type - enable",
+        "id": 15, "rule_type_id": 5, "value":false
+    },
+
+    {
+        "_comment":"rule type - privacy",
+        "id": 16, "rule_type_id": 2, "value":5
+    },
+    {
+        "_comment":"rule type - enable",
+        "id": 17, "rule_type_id": 5, "value":true
+    }
+]

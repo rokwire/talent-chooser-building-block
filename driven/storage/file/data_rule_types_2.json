@@ -1,0 +1,7 @@
+[
+    {"id": 1, "name" : "roles"},
+    {"id": 2, "name" : "privacy"},
+    {"id": 3, "name" : "auth"},
+    {"id": 4, "name" : "illini_cash"},
+    {"id": 5, "name" : "enable"}
+]

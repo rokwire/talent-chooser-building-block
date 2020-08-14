@@ -1,0 +1,1613 @@
+{
+    "last_updated": "2020-04-03 19:32:30.500249406 +0000 UTC",
+    "last_updated_by": "",
+    "content_items": [
+        {
+            "id": 1,
+            "name": "tabbar"
+        },
+        {
+            "id": 2,
+            "name": "home"
+        },
+        {
+            "id": 3,
+            "name": "campus_tools"
+        },
+        {
+            "id": 5,
+            "name": "features"
+        },
+        {
+            "id": 6,
+            "name": "browse"
+        },
+        {
+            "id": 7,
+            "name": "browse.all"
+        },
+        {
+            "id": 8,
+            "name": "browse.content"
+        },
+        {
+            "id": 9,
+            "name": "settings"
+        },
+        {
+            "id": 10,
+            "name": "settings.connect"
+        },
+        {
+            "id": 11,
+            "name": "settings.customizations"
+        },
+        {
+            "id": 12,
+            "name": "settings.connected"
+        },
+        {
+            "id": 13,
+            "name": "settings.connected.netid"
+        },
+        {
+            "id": 14,
+            "name": "settings.connected.phone"
+        },
+        {
+            "id": 15,
+            "name": "settings.notifications"
+        },
+        {
+            "id": 16,
+            "name": "settings.privacy"
+        },
+        {
+            "id": 17,
+            "name": "settings.account"
+        },
+        {
+            "id": 18,
+            "name": "health.covid19"
+        }
+    ],
+    "content_items_ui_items": [
+        {
+            "id": 2,
+            "content_item_id": 1,
+            "ui_item_id": 3
+        },
+        {
+            "id": 3,
+            "content_item_id": 1,
+            "ui_item_id": 4
+        },
+        {
+            "id": 4,
+            "content_item_id": 1,
+            "ui_item_id": 2
+        },
+        {
+            "id": 5,
+            "content_item_id": 2,
+            "ui_item_id": 27
+        },
+        {
+            "id": 6,
+            "content_item_id": 2,
+            "ui_item_id": 28
+        },
+        {
+            "id": 7,
+            "content_item_id": 2,
+            "ui_item_id": 6
+        },
+        {
+            "id": 8,
+            "content_item_id": 2,
+            "ui_item_id": 7
+        },
+        {
+            "id": 9,
+            "content_item_id": 2,
+            "ui_item_id": 8
+        },
+        {
+            "id": 10,
+            "content_item_id": 2,
+            "ui_item_id": 9
+        },
+        {
+            "id": 11,
+            "content_item_id": 2,
+            "ui_item_id": 10
+        },
+        {
+            "id": 12,
+            "content_item_id": 2,
+            "ui_item_id": 11
+        },
+        {
+            "id": 13,
+            "content_item_id": 2,
+            "ui_item_id": 18
+        },
+        {
+            "id": 14,
+            "content_item_id": 3,
+            "ui_item_id": 12
+        },
+        {
+            "id": 15,
+            "content_item_id": 3,
+            "ui_item_id": 13
+        },
+        {
+            "id": 16,
+            "content_item_id": 3,
+            "ui_item_id": 14
+        },
+        {
+            "id": 17,
+            "content_item_id": 3,
+            "ui_item_id": 15
+        },
+        {
+            "id": 18,
+            "content_item_id": 3,
+            "ui_item_id": 16
+        },
+        {
+            "id": 19,
+            "content_item_id": 3,
+            "ui_item_id": 17
+        },
+        {
+            "id": 20,
+            "content_item_id": 5,
+            "ui_item_id": 19
+        },
+        {
+            "id": 22,
+            "content_item_id": 6,
+            "ui_item_id": 29
+        },
+        {
+            "id": 23,
+            "content_item_id": 6,
+            "ui_item_id": 30
+        },
+        {
+            "id": 24,
+            "content_item_id": 7,
+            "ui_item_id": 31
+        },
+        {
+            "id": 25,
+            "content_item_id": 7,
+            "ui_item_id": 32
+        },
+        {
+            "id": 26,
+            "content_item_id": 7,
+            "ui_item_id": 33
+        },
+        {
+            "id": 27,
+            "content_item_id": 7,
+            "ui_item_id": 34
+        },
+        {
+            "id": 28,
+            "content_item_id": 8,
+            "ui_item_id": 35
+        },
+        {
+            "id": 29,
+            "content_item_id": 8,
+            "ui_item_id": 36
+        },
+        {
+            "id": 31,
+            "content_item_id": 8,
+            "ui_item_id": 38
+        },
+        {
+            "id": 32,
+            "content_item_id": 8,
+            "ui_item_id": 39
+        },
+        {
+            "id": 33,
+            "content_item_id": 8,
+            "ui_item_id": 40
+        },
+        {
+            "id": 35,
+            "content_item_id": 8,
+            "ui_item_id": 42
+        },
+        {
+            "id": 36,
+            "content_item_id": 8,
+            "ui_item_id": 43
+        },
+        {
+            "id": 37,
+            "content_item_id": 9,
+            "ui_item_id": 44
+        },
+        {
+            "id": 38,
+            "content_item_id": 9,
+            "ui_item_id": 45
+        },
+        {
+            "id": 39,
+            "content_item_id": 9,
+            "ui_item_id": 46
+        },
+        {
+            "id": 40,
+            "content_item_id": 9,
+            "ui_item_id": 47
+        },
+        {
+            "id": 41,
+            "content_item_id": 9,
+            "ui_item_id": 48
+        },
+        {
+            "id": 42,
+            "content_item_id": 9,
+            "ui_item_id": 49
+        },
+        {
+            "id": 43,
+            "content_item_id": 9,
+            "ui_item_id": 50
+        },
+        {
+            "id": 44,
+            "content_item_id": 9,
+            "ui_item_id": 51
+        },
+        {
+            "id": 45,
+            "content_item_id": 10,
+            "ui_item_id": 52
+        },
+        {
+            "id": 46,
+            "content_item_id": 10,
+            "ui_item_id": 53
+        },
+        {
+            "id": 47,
+            "content_item_id": 11,
+            "ui_item_id": 54
+        },
+        {
+            "id": 48,
+            "content_item_id": 11,
+            "ui_item_id": 55
+        },
+        {
+            "id": 49,
+            "content_item_id": 11,
+            "ui_item_id": 56
+        },
+        {
+            "id": 50,
+            "content_item_id": 12,
+            "ui_item_id": 57
+        },
+        {
+            "id": 51,
+            "content_item_id": 12,
+            "ui_item_id": 58
+        },
+        {
+            "id": 52,
+            "content_item_id": 13,
+            "ui_item_id": 59
+        },
+        {
+            "id": 53,
+            "content_item_id": 13,
+            "ui_item_id": 60
+        },
+        {
+            "id": 54,
+            "content_item_id": 13,
+            "ui_item_id": 61
+        },
+        {
+            "id": 55,
+            "content_item_id": 14,
+            "ui_item_id": 62
+        },
+        {
+            "id": 56,
+            "content_item_id": 14,
+            "ui_item_id": 63
+        },
+        {
+            "id": 57,
+            "content_item_id": 15,
+            "ui_item_id": 64
+        },
+        {
+            "id": 58,
+            "content_item_id": 15,
+            "ui_item_id": 65
+        },
+        {
+            "id": 59,
+            "content_item_id": 15,
+            "ui_item_id": 66
+        },
+        {
+            "id": 60,
+            "content_item_id": 16,
+            "ui_item_id": 67
+        },
+        {
+            "id": 61,
+            "content_item_id": 16,
+            "ui_item_id": 68
+        },
+        {
+            "id": 62,
+            "content_item_id": 17,
+            "ui_item_id": 69
+        },
+        {
+            "id": 63,
+            "content_item_id": 5,
+            "ui_item_id": 70
+        },
+        {
+            "id": 64,
+            "content_item_id": 1,
+            "ui_item_id": 71
+        },
+        {
+            "id": 65,
+            "content_item_id": 1,
+            "ui_item_id": 72
+        },
+        {
+            "id": 66,
+            "content_item_id": 5,
+            "ui_item_id": 73
+        },
+        {
+            "id": 67,
+            "content_item_id": 5,
+            "ui_item_id": 74
+        },
+        {
+            "id": 68,
+            "content_item_id": 7,
+            "ui_item_id": 75
+        },
+        {
+            "id": 69,
+            "content_item_id": 7,
+            "ui_item_id": 76
+        },
+        {
+            "id": 70,
+            "content_item_id": 8,
+            "ui_item_id": 77
+        },
+        {
+            "id": 71,
+            "content_item_id": 8,
+            "ui_item_id": 78
+        },
+        {
+            "id": 72,
+            "content_item_id": 8,
+            "ui_item_id": 79
+        },
+        {
+            "id": 73,
+            "content_item_id": 2,
+            "ui_item_id": 80
+        },
+        {
+            "id": 74,
+            "content_item_id": 18,
+            "ui_item_id": 81
+        },
+        {
+            "id": 75,
+            "content_item_id": 18,
+            "ui_item_id": 82
+        },
+        {
+            "id": 76,
+            "content_item_id": 18,
+            "ui_item_id": 83
+        },
+        {
+            "id": 77,
+            "content_item_id": 18,
+            "ui_item_id": 84
+        },
+        {
+            "id": 78,
+            "content_item_id": 18,
+            "ui_item_id": 85
+        },
+        {
+            "id": 79,
+            "content_item_id": 18,
+            "ui_item_id": 86
+        },
+        {
+            "id": 80,
+            "content_item_id": 3,
+            "ui_item_id": 87
+        },
+        {
+            "id": 81,
+            "content_item_id": 15,
+            "ui_item_id": 88
+        }
+    ],
+    "rule_types": [
+        {
+            "id": 1,
+            "name": "roles"
+        },
+        {
+            "id": 2,
+            "name": "privacy"
+        },
+        {
+            "id": 3,
+            "name": "auth"
+        },
+        {
+            "id": 4,
+            "name": "illini_cash"
+        },
+        {
+            "id": 5,
+            "name": "enable"
+        }
+    ],
+    "rules": [
+        {
+            "id": 1,
+            "rule_type_id": 1,
+            "value": [
+                [
+                    "NOT",
+                    "fan"
+                ],
+                "OR",
+                "student",
+                "OR",
+                "employee",
+                "OR",
+                "parent"
+            ]
+        },
+        {
+            "id": 2,
+            "rule_type_id": 1,
+            "value": [
+                "fan",
+                "AND",
+                [
+                    "NOT",
+                    [
+                        "student",
+                        "OR",
+                        "employee",
+                        "OR",
+                        "parent"
+                    ]
+                ]
+            ]
+        },
+        {
+            "id": 3,
+            "rule_type_id": 1,
+            "value": [
+                "fan"
+            ]
+        },
+        {
+            "id": 4,
+            "rule_type_id": 1,
+            "value": [
+                "fan"
+            ]
+        },
+        {
+            "id": 6,
+            "rule_type_id": 1,
+            "value": [
+                "student"
+            ]
+        },
+        {
+            "id": 7,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 8,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 9,
+            "rule_type_id": 4,
+            "value": {
+                "housingResidenceStatus": true
+            }
+        },
+        {
+            "id": 10,
+            "rule_type_id": 1,
+            "value": [
+                "student"
+            ]
+        },
+        {
+            "id": 11,
+            "rule_type_id": 2,
+            "value": 3
+        },
+        {
+            "id": 12,
+            "rule_type_id": 5,
+            "value": true
+        },
+        {
+            "id": 13,
+            "rule_type_id": 2,
+            "value": 3
+        },
+        {
+            "id": 14,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 16,
+            "rule_type_id": 2,
+            "value": 5
+        },
+        {
+            "id": 17,
+            "rule_type_id": 5,
+            "value": true
+        },
+        {
+            "id": 18,
+            "rule_type_id": 1,
+            "value": [
+                "student"
+            ]
+        },
+        {
+            "id": 19,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 20,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 21,
+            "rule_type_id": 4,
+            "value": {
+                "housingResidenceStatus": true
+            }
+        },
+        {
+            "id": 22,
+            "rule_type_id": 1,
+            "value": [
+                "student"
+            ]
+        },
+        {
+            "id": 23,
+            "rule_type_id": 1,
+            "value": [
+                "student",
+                "OR",
+                "employee"
+            ]
+        },
+        {
+            "id": 24,
+            "rule_type_id": 1,
+            "value": [
+                "student",
+                "OR",
+                "employee"
+            ]
+        },
+        {
+            "id": 26,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 27,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 28,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 29,
+            "rule_type_id": 2,
+            "value": 3
+        },
+        {
+            "id": 30,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 31,
+            "rule_type_id": 2,
+            "value": 4
+        },
+        {
+            "id": 34,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 35,
+            "rule_type_id": 3,
+            "value": {
+                "loggedIn": false
+            }
+        },
+        {
+            "id": 36,
+            "rule_type_id": 3,
+            "value": {
+                "loggedIn": true
+            }
+        },
+        {
+            "id": 37,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 38,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 39,
+            "rule_type_id": 3,
+            "value": {
+                "phoneLoggedIn": true
+            }
+        },
+        {
+            "id": 40,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 41,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 42,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": false
+            }
+        },
+        {
+            "id": 43,
+            "rule_type_id": 3,
+            "value": {
+                "phoneLoggedIn": true
+            }
+        },
+        {
+            "id": 44,
+            "rule_type_id": 3,
+            "value": {
+                "phoneLoggedIn": false
+            }
+        },
+        {
+            "id": 45,
+            "rule_type_id": 5,
+            "value": false
+        },
+        {
+            "id": 46,
+            "rule_type_id": 1,
+            "value": [
+                "NOT",
+                [
+                    "employee",
+                    "OR",
+                    "student"
+                ]
+            ]
+        },
+        {
+            "id": 47,
+            "rule_type_id": 1,
+            "value": [
+                "employee",
+                "OR",
+                "student"
+            ]
+        },
+        {
+            "id": 48,
+            "rule_type_id": 5,
+            "value": false
+        },
+        {
+            "id": 49,
+            "rule_type_id": 1,
+            "value": false
+        },
+        {
+            "id": 50,
+            "rule_type_id": 5,
+            "value": true
+        },
+        {
+            "id": 51,
+            "rule_type_id": 5,
+            "value": false
+        },
+        {
+            "id": 52,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethMemberOf": "urn:mace:uiuc.edu:urbana:authman:app-rokwire-service-policy-rokwire event approvers"
+            }
+        },
+        {
+            "id": 53,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethMemberOf": "urn:mace:uiuc.edu:urbana:authman:app-rokwire-service-policy-rokwire stadium poll manager"
+            }
+        },
+        {
+            "id": 54,
+            "rule_type_id": 2,
+            "value": 3
+        },
+        {
+            "id": 55,
+            "rule_type_id": 2,
+            "value": 3
+        },
+        {
+            "id": 56,
+            "rule_type_id": 5,
+            "value": true
+        },
+        {
+            "id": 57,
+            "rule_type_id": 1,
+            "value": [
+                "student"
+            ]
+        },
+        {
+            "id": 58,
+            "rule_type_id": 1,
+            "value": [
+                "student",
+                "OR",
+                "employee",
+                "OR",
+                "parent"
+            ]
+        },
+        {
+            "id": 59,
+            "rule_type_id": 1,
+            "value": [
+                "student",
+                "OR",
+                "employee",
+                "OR",
+                "parent"
+            ]
+        },
+        {
+            "id": 61,
+            "rule_type_id": 1,
+            "value": [
+                "student",
+                "OR",
+                "employee"
+            ]
+        },
+        {
+            "id": 62,
+            "rule_type_id": 3,
+            "value": {
+                "shibbolethLoggedIn": true
+            }
+        },
+        {
+            "id": 63,
+            "rule_type_id": 5,
+            "value": false
+        },
+        {
+            "id": 64,
+            "rule_type_id": 5,
+            "value": false
+        },
+        {
+            "id": 66,
+            "rule_type_id": 5,
+            "value": false
+        },
+        {
+            "id": 67,
+            "rule_type_id": 1,
+            "value": [
+                "NOT",
+                [
+                    "visitor",
+                    "OR",
+                    "parent",
+                    "OR",
+                    "employee",
+                    "OR",
+                    "alumni",
+                    "OR",
+                    "fan",
+                    "OR",
+                    "student"
+                ]
+            ]
+        }
+    ],
+    "rules_ui_items": [
+        {
+            "id": 1,
+            "ui_item_id": 2,
+            "rule_id": 1
+        },
+        {
+            "id": 2,
+            "ui_item_id": 3,
+            "rule_id": 2
+        },
+        {
+            "id": 3,
+            "ui_item_id": 6,
+            "rule_id": 3
+        },
+        {
+            "id": 4,
+            "ui_item_id": 8,
+            "rule_id": 4
+        },
+        {
+            "id": 6,
+            "ui_item_id": 16,
+            "rule_id": 6
+        },
+        {
+            "id": 7,
+            "ui_item_id": 16,
+            "rule_id": 7
+        },
+        {
+            "id": 8,
+            "ui_item_id": 16,
+            "rule_id": 8
+        },
+        {
+            "id": 9,
+            "ui_item_id": 16,
+            "rule_id": 9
+        },
+        {
+            "id": 10,
+            "ui_item_id": 17,
+            "rule_id": 10
+        },
+        {
+            "id": 11,
+            "ui_item_id": 15,
+            "rule_id": 11
+        },
+        {
+            "id": 12,
+            "ui_item_id": 15,
+            "rule_id": 12
+        },
+        {
+            "id": 13,
+            "ui_item_id": 18,
+            "rule_id": 13
+        },
+        {
+            "id": 14,
+            "ui_item_id": 11,
+            "rule_id": 14
+        },
+        {
+            "id": 16,
+            "ui_item_id": 19,
+            "rule_id": 16
+        },
+        {
+            "id": 17,
+            "ui_item_id": 19,
+            "rule_id": 17
+        },
+        {
+            "id": 18,
+            "ui_item_id": 36,
+            "rule_id": 18
+        },
+        {
+            "id": 19,
+            "ui_item_id": 36,
+            "rule_id": 19
+        },
+        {
+            "id": 20,
+            "ui_item_id": 36,
+            "rule_id": 20
+        },
+        {
+            "id": 21,
+            "ui_item_id": 36,
+            "rule_id": 21
+        },
+        {
+            "id": 22,
+            "ui_item_id": 35,
+            "rule_id": 22
+        },
+        {
+            "id": 23,
+            "ui_item_id": 28,
+            "rule_id": 23
+        },
+        {
+            "id": 24,
+            "ui_item_id": 70,
+            "rule_id": 24
+        },
+        {
+            "id": 26,
+            "ui_item_id": 44,
+            "rule_id": 26
+        },
+        {
+            "id": 27,
+            "ui_item_id": 45,
+            "rule_id": 27
+        },
+        {
+            "id": 28,
+            "ui_item_id": 47,
+            "rule_id": 28
+        },
+        {
+            "id": 29,
+            "ui_item_id": 46,
+            "rule_id": 29
+        },
+        {
+            "id": 30,
+            "ui_item_id": 48,
+            "rule_id": 30
+        },
+        {
+            "id": 31,
+            "ui_item_id": 50,
+            "rule_id": 31
+        },
+        {
+            "id": 34,
+            "ui_item_id": 44,
+            "rule_id": 34
+        },
+        {
+            "id": 35,
+            "ui_item_id": 45,
+            "rule_id": 35
+        },
+        {
+            "id": 36,
+            "ui_item_id": 47,
+            "rule_id": 36
+        },
+        {
+            "id": 37,
+            "ui_item_id": 50,
+            "rule_id": 37
+        },
+        {
+            "id": 38,
+            "ui_item_id": 57,
+            "rule_id": 38
+        },
+        {
+            "id": 39,
+            "ui_item_id": 58,
+            "rule_id": 39
+        },
+        {
+            "id": 40,
+            "ui_item_id": 59,
+            "rule_id": 40
+        },
+        {
+            "id": 41,
+            "ui_item_id": 60,
+            "rule_id": 41
+        },
+        {
+            "id": 42,
+            "ui_item_id": 61,
+            "rule_id": 42
+        },
+        {
+            "id": 43,
+            "ui_item_id": 62,
+            "rule_id": 43
+        },
+        {
+            "id": 44,
+            "ui_item_id": 63,
+            "rule_id": 44
+        },
+        {
+            "id": 45,
+            "ui_item_id": 18,
+            "rule_id": 45
+        },
+        {
+            "id": 46,
+            "ui_item_id": 4,
+            "rule_id": 46
+        },
+        {
+            "id": 47,
+            "ui_item_id": 71,
+            "rule_id": 47
+        },
+        {
+            "id": 48,
+            "ui_item_id": 43,
+            "rule_id": 48
+        },
+        {
+            "id": 49,
+            "ui_item_id": 73,
+            "rule_id": 49
+        },
+        {
+            "id": 50,
+            "ui_item_id": 74,
+            "rule_id": 50
+        },
+        {
+            "id": 51,
+            "ui_item_id": 39,
+            "rule_id": 51
+        },
+        {
+            "id": 52,
+            "ui_item_id": 39,
+            "rule_id": 52
+        },
+        {
+            "id": 53,
+            "ui_item_id": 42,
+            "rule_id": 53
+        },
+        {
+            "id": 54,
+            "ui_item_id": 75,
+            "rule_id": 54
+        },
+        {
+            "id": 55,
+            "ui_item_id": 78,
+            "rule_id": 55
+        },
+        {
+            "id": 56,
+            "ui_item_id": 78,
+            "rule_id": 56
+        },
+        {
+            "id": 57,
+            "ui_item_id": 79,
+            "rule_id": 57
+        },
+        {
+            "id": 58,
+            "ui_item_id": 78,
+            "rule_id": 58
+        },
+        {
+            "id": 59,
+            "ui_item_id": 15,
+            "rule_id": 59
+        },
+        {
+            "id": 61,
+            "ui_item_id": 80,
+            "rule_id": 61
+        },
+        {
+            "id": 62,
+            "ui_item_id": 80,
+            "rule_id": 62
+        },
+        {
+            "id": 63,
+            "ui_item_id": 27,
+            "rule_id": 63
+        },
+        {
+            "id": 64,
+            "ui_item_id": 6,
+            "rule_id": 64
+        },
+        {
+            "id": 66,
+            "ui_item_id": 88,
+            "rule_id": 66
+        },
+        {
+            "id": 67,
+            "ui_item_id": 87,
+            "rule_id": 67
+        }
+    ],
+    "ui_items": [
+        {
+            "id": 2,
+            "name": "home",
+            "order": 1
+        },
+        {
+            "id": 3,
+            "name": "athletics",
+            "order": 2
+        },
+        {
+            "id": 4,
+            "name": "explore",
+            "order": 3
+        },
+        {
+            "id": 6,
+            "name": "game_day",
+            "order": 4
+        },
+        {
+            "id": 7,
+            "name": "campus_tools",
+            "order": 5
+        },
+        {
+            "id": 8,
+            "name": "pref_sports",
+            "order": 6
+        },
+        {
+            "id": 9,
+            "name": "campus_reminders",
+            "order": 7
+        },
+        {
+            "id": 10,
+            "name": "upcoming_events",
+            "order": 8
+        },
+        {
+            "id": 11,
+            "name": "recent_items",
+            "order": 10
+        },
+        {
+            "id": 12,
+            "name": "events",
+            "order": 1
+        },
+        {
+            "id": 13,
+            "name": "dining",
+            "order": 3
+        },
+        {
+            "id": 14,
+            "name": "athletics",
+            "order": 4
+        },
+        {
+            "id": 15,
+            "name": "illini_cash",
+            "order": 5
+        },
+        {
+            "id": 16,
+            "name": "laundry",
+            "order": 6
+        },
+        {
+            "id": 17,
+            "name": "my_illini",
+            "order": 7
+        },
+        {
+            "id": 18,
+            "name": "interests_selection",
+            "order": 9
+        },
+        {
+            "id": 19,
+            "name": "converge",
+            "order": 1
+        },
+        {
+            "id": 20,
+            "name": "events_list",
+            "order": 0
+        },
+        {
+            "id": 21,
+            "name": "map",
+            "order": 0
+        },
+        {
+            "id": 23,
+            "name": "filters",
+            "order": 0
+        },
+        {
+            "id": 27,
+            "name": "voter_registration",
+            "order": 2
+        },
+        {
+            "id": 28,
+            "name": "create_poll",
+            "order": 3
+        },
+        {
+            "id": 29,
+            "name": "browse.all",
+            "order": 1
+        },
+        {
+            "id": 30,
+            "name": "browse.content",
+            "order": 2
+        },
+        {
+            "id": 31,
+            "name": "athletics",
+            "order": 1
+        },
+        {
+            "id": 32,
+            "name": "events",
+            "order": 4
+        },
+        {
+            "id": 33,
+            "name": "dining",
+            "order": 3
+        },
+        {
+            "id": 34,
+            "name": "wellness",
+            "order": 6
+        },
+        {
+            "id": 35,
+            "name": "my_illini",
+            "order": 2
+        },
+        {
+            "id": 36,
+            "name": "laundry",
+            "order": 3
+        },
+        {
+            "id": 38,
+            "name": "feedback",
+            "order": 7
+        },
+        {
+            "id": 39,
+            "name": "create_event",
+            "order": 8
+        },
+        {
+            "id": 40,
+            "name": "parking",
+            "order": 6
+        },
+        {
+            "id": 42,
+            "name": "create_stadium_poll",
+            "order": 9
+        },
+        {
+            "id": 43,
+            "name": "state_farm_wayfinding",
+            "order": 10
+        },
+        {
+            "id": 44,
+            "name": "user_info",
+            "order": 1
+        },
+        {
+            "id": 45,
+            "name": "connect",
+            "order": 2
+        },
+        {
+            "id": 46,
+            "name": "customizations",
+            "order": 3
+        },
+        {
+            "id": 47,
+            "name": "connected",
+            "order": 4
+        },
+        {
+            "id": 48,
+            "name": "notifications",
+            "order": 5
+        },
+        {
+            "id": 49,
+            "name": "privacy",
+            "order": 6
+        },
+        {
+            "id": 50,
+            "name": "account",
+            "order": 7
+        },
+        {
+            "id": 51,
+            "name": "feedback",
+            "order": 8
+        },
+        {
+            "id": 52,
+            "name": "netid",
+            "order": 1
+        },
+        {
+            "id": 53,
+            "name": "phone",
+            "order": 2
+        },
+        {
+            "id": 54,
+            "name": "roles",
+            "order": 1
+        },
+        {
+            "id": 55,
+            "name": "interests",
+            "order": 2
+        },
+        {
+            "id": 56,
+            "name": "food_filters",
+            "order": 3
+        },
+        {
+            "id": 57,
+            "name": "netid",
+            "order": 1
+        },
+        {
+            "id": 58,
+            "name": "phone",
+            "order": 2
+        },
+        {
+            "id": 59,
+            "name": "info",
+            "order": 1
+        },
+        {
+            "id": 60,
+            "name": "disconnect",
+            "order": 2
+        },
+        {
+            "id": 61,
+            "name": "connect",
+            "order": 3
+        },
+        {
+            "id": 62,
+            "name": "info",
+            "order": 1
+        },
+        {
+            "id": 63,
+            "name": "verify",
+            "order": 2
+        },
+        {
+            "id": 64,
+            "name": "reminders",
+            "order": 1
+        },
+        {
+            "id": 65,
+            "name": "athletics_updates",
+            "order": 2
+        },
+        {
+            "id": 66,
+            "name": "dining",
+            "order": 3
+        },
+        {
+            "id": 67,
+            "name": "edit",
+            "order": 1
+        },
+        {
+            "id": 68,
+            "name": "statement",
+            "order": 2
+        },
+        {
+            "id": 69,
+            "name": "personal_info",
+            "order": 1
+        },
+        {
+            "id": 70,
+            "name": "create_poll",
+            "order": 2
+        },
+        {
+            "id": 71,
+            "name": "wallet",
+            "order": 4
+        },
+        {
+            "id": 72,
+            "name": "browse",
+            "order": 5
+        },
+        {
+            "id": 73,
+            "name": "mtd_bus_number",
+            "order": 3
+        },
+        {
+            "id": 74,
+            "name": "parking_lot_directions",
+            "order": 4
+        },
+        {
+            "id": 75,
+            "name": "saved",
+            "order": 2
+        },
+        {
+            "id": 76,
+            "name": "quick_polls",
+            "order": 5
+        },
+        {
+            "id": 77,
+            "name": "settings",
+            "order": 1
+        },
+        {
+            "id": 78,
+            "name": "illini_cash",
+            "order": 4
+        },
+        {
+            "id": 79,
+            "name": "meal_plan",
+            "order": 5
+        },
+        {
+            "id": 80,
+            "name": "upgrade_version_message",
+            "order": 1
+        },
+        {
+            "id": 81,
+            "name": "latest_update",
+            "order": 2
+        },
+        {
+            "id": 82,
+            "name": "stay_informed",
+            "order": 3
+        },
+        {
+            "id": 83,
+            "name": "news",
+            "order": 4
+        },
+        {
+            "id": 84,
+            "name": "resources",
+            "order": 5
+        },
+        {
+            "id": 85,
+            "name": "general",
+            "order": 6
+        },
+        {
+            "id": 86,
+            "name": "faq",
+            "order": 7
+        },
+        {
+            "id": 87,
+            "name": "covid19",
+            "order": 2
+        },
+        {
+            "id": 88,
+            "name": "covid19",
+            "order": 4
+        }
+    ]
+}
