@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update README.
+- Update issue templates. [#2](https://github.com/rokwire/talent-chooser-building-block/issues/2)
 
 ## [1.2.1] - 2020-08-03
 ### Fixed
