@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Add 2.3 UIUC version. [#4](https://github.com/rokwire/talent-chooser-building-block/issues/4)
 - Export/Import data feature.
 - CODEOWNERS file. 
 
