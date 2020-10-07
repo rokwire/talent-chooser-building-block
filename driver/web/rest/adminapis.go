@@ -83,7 +83,7 @@ func (h AdminApisHandler) SetDataVersion(w http.ResponseWriter, r *http.Request)
 		return
 	}
 	dataVersion := requestData.DataVersion
-	if !(dataVersion == "1.2" || dataVersion == "2.0" || dataVersion == "2.1" || dataVersion == "2.2") {
+	if !(dataVersion == "1.2" || dataVersion == "2.0" || dataVersion == "2.1" || dataVersion == "2.2" || dataVersion == "2.3") {
 		log.Println("Not valid data version")
 		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
 		return

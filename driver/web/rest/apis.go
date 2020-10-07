@@ -199,11 +199,11 @@ func (h ApisHandler) getDataVersion(r *http.Request) string {
 }
 
 func (h ApisHandler) getLatestVersion() string {
-	return "2.2"
+	return "2.3"
 }
 
 func (h ApisHandler) isSupportedVersion(v string) bool {
-	return v == "1.2" || v == "2.0" || v == "2.1" || v == "2.2"
+	return v == "1.2" || v == "2.0" || v == "2.1" || v == "2.2" || v == "2.3"
 }
 
 //Swag does not support map!
