@@ -93,108 +93,30 @@ func (m *database) applyTChDataChecks(tchdata *collectionWrapper) error {
 		return err
 	}
 
-	//1. check if there is 1.2 data
-	data1p2filter := bson.D{primitive.E{Key: "version", Value: "1.2"}}
-	var data1p2Result []*dataItem
-	err = tchdata.Find(data1p2filter, &data1p2Result, nil)
+	// check if there is 2.3 data
+	filter := bson.D{primitive.E{Key: "version", Value: "2.3"}}
+	var result []*dataItem
+	err = tchdata.Find(filter, &result, nil)
 	if err != nil {
 		return err
 	}
-	if data1p2Result == nil || len(data1p2Result) == 0 {
-		//there is no 1.2 data, so insert it
-		log.Println("there is no 1.2 data, so insert it")
+	if result == nil || len(result) == 0 {
+		//there is no 2.3 data, so insert it
+		log.Println("there is no 2.3 data, so insert it")
 
-		data, err := ioutil.ReadFile("./driven/storage/mongodb/1.2.json")
+		data, err := ioutil.ReadFile("./driven/storage/mongodb/2.3.json")
 		if err != nil {
 			return err
 		}
-		dataItem := dataItem{"1.2", string(data)}
+		dataItem := dataItem{"2.3", string(data)}
 		_, err = tchdata.InsertOne(dataItem)
 		if err != nil {
 			return err
 		}
 
 	} else {
-		//there is 1.2, nothing to do
-		log.Println("there is 1.2, nothing to do")
-	}
-
-	//2. check if there is 2.0 data
-	data2p0filter := bson.D{primitive.E{Key: "version", Value: "2.0"}}
-	var data2p0Result []*dataItem
-	err = tchdata.Find(data2p0filter, &data2p0Result, nil)
-	if err != nil {
-		return err
-	}
-	if data2p0Result == nil || len(data2p0Result) == 0 {
-		//there is no 2.0 data, so insert it
-		log.Println("there is no 2.0 data, so insert it")
-
-		data, err := ioutil.ReadFile("./driven/storage/mongodb/2.0.json")
-		if err != nil {
-			return err
-		}
-		dataItem := dataItem{"2.0", string(data)}
-		_, err = tchdata.InsertOne(dataItem)
-		if err != nil {
-			return err
-		}
-
-	} else {
-		//there is 2.0, nothing to do
-		log.Println("there is 2.0, nothing to do")
-	}
-
-	//3. check if there is 2.1 data
-	data2p1filter := bson.D{primitive.E{Key: "version", Value: "2.1"}}
-	var data2p1Result []*dataItem
-	err = tchdata.Find(data2p1filter, &data2p1Result, nil)
-	if err != nil {
-		return err
-	}
-	if data2p1Result == nil || len(data2p1Result) == 0 {
-		//there is no 2.1 data, so insert it
-		log.Println("there is no 2.1 data, so insert it")
-
-		data, err := ioutil.ReadFile("./driven/storage/mongodb/2.1.json")
-		if err != nil {
-			return err
-		}
-		dataItem := dataItem{"2.1", string(data)}
-		_, err = tchdata.InsertOne(dataItem)
-		if err != nil {
-			return err
-		}
-
-	} else {
-		//there is 2.1, nothing to do
-		log.Println("there is 2.1, nothing to do")
-	}
-
-	//4. check if there is 2.2 data
-	data2p2filter := bson.D{primitive.E{Key: "version", Value: "2.2"}}
-	var data2p2Result []*dataItem
-	err = tchdata.Find(data2p2filter, &data2p2Result, nil)
-	if err != nil {
-		return err
-	}
-	if data2p2Result == nil || len(data2p2Result) == 0 {
-		//there is no 2.2 data, so insert it
-		log.Println("there is no 2.2 data, so insert it")
-
-		data, err := ioutil.ReadFile("./driven/storage/mongodb/2.2.json")
-		if err != nil {
-			return err
-		}
-		dataItem := dataItem{"2.2", string(data)}
-		_, err = tchdata.InsertOne(dataItem)
-		if err != nil {
-			return err
-		}
-
-	} else {
-		//there is 2.2, nothing to do
-		log.Println("there is 2.2, nothing to do")
+		//there is 2.3, nothing to do
+		log.Println("there is 2.3, nothing to do")
 	}
 
 	log.Println("tchdata checks passed")

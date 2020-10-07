@@ -43,7 +43,7 @@ type Adapter struct {
 
 // @title Rokwire Talent Chooser Building Block API
 // @description Rokwire Talent Chooser Building Block API Documentation.
-// @version 1.2.1
+// @version 1.3.0
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
 // @host localhost
