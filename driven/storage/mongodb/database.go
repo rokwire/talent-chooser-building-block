@@ -19,7 +19,7 @@ package mongodb
 
 import (
 	"context"
-	"io/ioutil"
+	"errors"
 	"log"
 	"talent-chooser/core"
 	"time"
@@ -93,30 +93,38 @@ func (m *database) applyTChDataChecks(tchdata *collectionWrapper) error {
 		return err
 	}
 
-	// check if there is 2.3 data
-	filter := bson.D{primitive.E{Key: "version", Value: "2.3"}}
+	// check if there is 2.4 data
+	filter := bson.D{primitive.E{Key: "version", Value: "2.4"}}
 	var result []*dataItem
 	err = tchdata.Find(filter, &result, nil)
 	if err != nil {
 		return err
 	}
 	if result == nil || len(result) == 0 {
-		//there is no 2.3 data, so insert it
-		log.Println("there is no 2.3 data, so insert it")
+		//there is no 2.4 data, so insert it
+		log.Println("there is no 2.4 data, so insert it")
 
-		data, err := ioutil.ReadFile("./driven/storage/mongodb/2.3.json")
+		//get the initial 2.4 data from 2.3
+		filter2p3 := bson.D{primitive.E{Key: "version", Value: "2.3"}}
+		var result2p3 []*dataItem
+		err = tchdata.Find(filter2p3, &result2p3, nil)
 		if err != nil {
 			return err
 		}
-		dataItem := dataItem{"2.3", string(data)}
-		_, err = tchdata.InsertOne(dataItem)
+		if result2p3 == nil || len(result2p3) == 0 {
+			return errors.New("there is no 2.3 for some reasons")
+		}
+		dataItem2p3 := result2p3[0]
+
+		//insert data for 2.4
+		dataItem2p4 := dataItem{Version: "2.4", Data: dataItem2p3.Data}
+		_, err = tchdata.InsertOne(dataItem2p4)
 		if err != nil {
 			return err
 		}
-
 	} else {
-		//there is 2.3, nothing to do
-		log.Println("there is 2.3, nothing to do")
+		//there is 2.4, nothing to do
+		log.Println("there is 2.4, nothing to do")
 	}
 
 	log.Println("tchdata checks passed")

@@ -14,8 +14,6 @@ COPY --from=builder /tc-app/bin/talent-chooser /
 COPY --from=builder /tc-app/driver/web/ui /driver/web/ui
 COPY --from=builder /tc-app/docs/swagger.yaml /docs/swagger.yaml
 
-COPY --from=builder /tc-app/driven/storage/mongodb/2.3.json /driven/storage/mongodb/2.3.json
-
 COPY --from=builder /etc/passwd /etc/passwd
 
 ENTRYPOINT ["/talent-chooser"]
