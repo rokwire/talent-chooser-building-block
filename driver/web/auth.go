@@ -27,7 +27,7 @@ import (
 	"talent-chooser/utils"
 	"time"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt"
 	"golang.org/x/oauth2"
 	"gopkg.in/ericchiang/go-oidc.v2"
 )
