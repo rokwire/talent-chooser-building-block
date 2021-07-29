@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.0] - 2021-07-29
+### Security
+- Update "jwt-go" library. [#16](https://github.com/rokwire/talent-chooser-building-block/issues/16)
+
 ## [1.6.0] - 2021-07-16
 ### Added
 - Add 2.6 UIUC version. [#11](https://github.com/rokwire/talent-chooser-building-block/issues/11)
@@ -46,7 +50,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - 2.1 and 2.2 data version support.
 
-[Unreleased]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.6.0...HEAD
+[Unreleased]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.7.0...HEAD
+[1.7.0]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.3.0...v1.4.0
