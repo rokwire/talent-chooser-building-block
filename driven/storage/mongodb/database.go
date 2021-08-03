@@ -93,38 +93,38 @@ func (m *database) applyTChDataChecks(tchdata *collectionWrapper) error {
 		return err
 	}
 
-	// check if there is 2.6 data
-	filter := bson.D{primitive.E{Key: "version", Value: "2.6"}}
+	// check if there is 2.0 data
+	filter := bson.D{primitive.E{Key: "version", Value: "3.0"}}
 	var result []*dataItem
 	err = tchdata.Find(filter, &result, nil)
 	if err != nil {
 		return err
 	}
 	if len(result) == 0 {
-		//there is no 2.6 data, so insert it
-		log.Println("there is no 2.6 data, so insert it")
+		//there is no 3.0 data, so insert it
+		log.Println("there is no 3.0 data, so insert it")
 
-		//get the initial 2.6 data from 2.5
-		filter2p5 := bson.D{primitive.E{Key: "version", Value: "2.5"}}
-		var result2p5 []*dataItem
-		err = tchdata.Find(filter2p5, &result2p5, nil)
+		//get the initial 3.0 data from 2.6
+		filter2p6 := bson.D{primitive.E{Key: "version", Value: "2.6"}}
+		var result2p6 []*dataItem
+		err = tchdata.Find(filter2p6, &result2p6, nil)
 		if err != nil {
 			return err
 		}
-		if len(result2p5) == 0 {
-			return errors.New("there is no 2.5 for some reasons")
+		if len(result2p6) == 0 {
+			return errors.New("there is no 2.6 for some reasons")
 		}
-		dataItem2p5 := result2p5[0]
+		dataItem2p6 := result2p6[0]
 
-		//insert data for 2.6
-		dataItem2p6 := dataItem{Version: "2.6", Data: dataItem2p5.Data}
-		_, err = tchdata.InsertOne(dataItem2p6)
+		//insert data for 3.0
+		dataItem3p0 := dataItem{Version: "3.0", Data: dataItem2p6.Data}
+		_, err = tchdata.InsertOne(dataItem3p0)
 		if err != nil {
 			return err
 		}
 	} else {
-		//there is 2.6, nothing to do
-		log.Println("there is 2.6, nothing to do")
+		//there is 3.0, nothing to do
+		log.Println("there is 3.0, nothing to do")
 	}
 
 	log.Println("tchdata checks passed")
