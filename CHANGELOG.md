@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Upgrade mongo driver. [#19](https://github.com/rokwire/talent-chooser-building-block/issues/19)
 
+### Added
+- Add 3.0 UIUC version. [#21](https://github.com/rokwire/talent-chooser-building-block/issues/21)
+
 ## [1.7.0] - 2021-07-29
 ### Security
 - Update "jwt-go" library. [#16](https://github.com/rokwire/talent-chooser-building-block/issues/16)
