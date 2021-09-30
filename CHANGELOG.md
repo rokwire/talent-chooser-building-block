@@ -40,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add code of conduct file.
 
 ### Security
+- Create Security.md [#24](https://github.com/rokwire/talent-chooser-building-block/issues/24)
 - Fix Docker image vulnerabilities reported in ECR. 
 
 ## [1.0.261] - 2020-07-03
