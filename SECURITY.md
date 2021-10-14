@@ -4,6 +4,7 @@
 Patches for **Talent chooser Building Block** in this repository will only be applied to the following versions:
 | Version | Supported          |
 | ------- | ------------------ |
+| 1.9.0   | :white_check_mark: |
 | 1.8.0   | :white_check_mark: |
 | < 1.8.0 | :x:                |
 ## Reporting a Vulnerability
