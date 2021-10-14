@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.0] - 2021-10-14
+### Added
+- Add 2.7 UIUC version [#22](https://github.com/rokwire/talent-chooser-building-block/issues/22)
+
 ## [1.8.0] - 2021-08-03
 ### Security
 - Upgrade mongo driver. [#19](https://github.com/rokwire/talent-chooser-building-block/issues/19)
@@ -51,13 +55,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add code of conduct file.
 
 ### Security
+- Create Security.md [#24](https://github.com/rokwire/talent-chooser-building-block/issues/24)
 - Fix Docker image vulnerabilities reported in ECR. 
 
 ## [1.0.261] - 2020-07-03
 ### Added
 - 2.1 and 2.2 data version support.
 
-[Unreleased]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.8.0...HEAD
+[Unreleased]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.9.0...HEAD
+[1.9.0]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.8.0...v1.9.0
 [1.8.0]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/rokwire/talent-chooser-building-block/compare/v1.5.0...v1.6.0
