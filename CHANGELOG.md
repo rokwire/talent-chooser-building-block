@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Add 2.7 UIUC version [#22](https://github.com/rokwire/talent-chooser-building-block/issues/22)
 
 ## [1.8.0] - 2021-08-03
 ### Security
