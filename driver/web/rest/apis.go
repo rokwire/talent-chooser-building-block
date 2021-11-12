@@ -204,7 +204,7 @@ func (h ApisHandler) getLatestVersion() string {
 
 func (h ApisHandler) isSupportedVersion(v string) bool {
 	return v == "1.2" || v == "2.0" || v == "2.1" || v == "2.2" || v == "2.3" || v == "2.4" || v == "2.5" || v == "2.6" ||
-		v == "2.7" || v == "3.0"
+		v == "2.7" || v == "2.8" || v == "3.0"
 }
 
 //Swag does not support map!
