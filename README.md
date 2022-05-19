@@ -1,4 +1,4 @@
-# Talent Chooser building block
+# Talent Chooser Building Block (Archived)
 
 Go project to provide rest service for rokwire building block talent chooser results.
 
